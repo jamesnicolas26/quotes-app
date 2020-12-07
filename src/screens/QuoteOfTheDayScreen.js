@@ -1,28 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Alert } from 'react-native';
+import QuoteOfTheDay from '../components/Quote';
 
-const HomeScreen = ({ navigation }) => {
+const QuoteOfTheDayScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
     <StatusBar style="auto" />
-
-    <TouchableOpacity style={styles.button}         
-        onPress={() => {
-          navigation.navigate('InspireMe')
-        }}>
-      <Text style={styles.buttonText}>Inspire Me!</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.button}         
-      onPress={() => {
-          navigation.navigate('FavQuote')
-      }}>
-      <Text style={styles.buttonText}>Favorite Quotes</Text>
+    <QuoteOfTheDay />
+    <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}>Add to favorites</Text>
     </TouchableOpacity>
     </View>
   );
-
 };
 
 const styles = StyleSheet.create({
@@ -34,6 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#524d54'
 	},
   button: {
+    marginBottom: 50,
     paddingTop:10,
     paddingBottom:10,
     backgroundColor:'#9f0cfa',
@@ -43,12 +34,10 @@ const styles = StyleSheet.create({
     width: '60%'
   },
   buttonText: {
-    color:'#ffffff',
-    backgroundColor:'#9f0cfa',
-    borderColor: '#9f0cfa', 
+    color:'#ffffff', 
     textAlign:'center', 
     fontSize: 15
   }
 });
 
-export default HomeScreen;
+export default QuoteOfTheDayScreen;
