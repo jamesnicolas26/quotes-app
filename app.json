@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nicolas-quotes-app",
-    "slug": "nicolas-quotes-app",
+    "name": "fudotan-quotes-app",
+    "slug": "fudotan-quotes-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
